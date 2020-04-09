@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "globalType": ["./src/types/global.d.ts"],
+      "@/*": ["./src/*"],
+      "@component/*": ["./src/components/*"],
+      "@constant/*": ["./src/constant/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@store/*": ["./src/store/*"]
+    }
+  }
+}

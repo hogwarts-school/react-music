@@ -1,0 +1,29 @@
+name: CI
+on: push
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install
+        run: |
+          npm install
+      - name: Lint
+        run: |
+          npm run lint
+      - name: Test
+        run: |
+          npm run test -- --watchAll=false
+      - name: Build
+        run: |
+          PUBLIC_URL=./ npm run build
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@1.1.3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          BUILD_SCRIPT: npm install && npm rebuild node-sass && PUBLIC_URL=./ npm run build
