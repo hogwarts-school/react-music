@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { SWRConfig } from 'swr';
 import Router from './router';
 import { Provider } from './store';
 import * as serviceWorker from './serviceWorker';
+import './sass/global.scss';
+import './utils/rem';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
-      <Router />
-    </Provider>
+    <SWRConfig
+      value={{
+        refreshInterval: 3000,
+        fetcher: (...args: [any, any?]) => fetch(...args).then((res) => res.json())
+      }}
+    >
+      <Provider>
+        <Router />
+      </Provider>
+    </SWRConfig>
   </React.StrictMode>,
   document.getElementById('root')
 );

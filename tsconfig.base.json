@@ -2,11 +2,13 @@
   "compilerOptions": {
     "paths": {
       "globalType": ["./src/types/global.d.ts"],
-      "@/*": ["./src/*"],
+      "@src/*": ["./src/*"],
       "@component/*": ["./src/components/*"],
       "@constant/*": ["./src/constant/*"],
       "@pages/*": ["./src/pages/*"],
-      "@store/*": ["./src/store/*"]
+      "@sass/*": ["./src/sass"],
+      "@store/*": ["./src/store/*"],
+      "@test-tools/*": ["./src/test-tools/*"]
     }
   }
 }

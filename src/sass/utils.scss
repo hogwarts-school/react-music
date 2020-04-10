@@ -1,0 +1,6 @@
+/* 此文件放scss工具函数 */
+
+// 750设计稿px转rem
+@function px2rem($px) {
+  @return $px * 1rem / 100;
+}
