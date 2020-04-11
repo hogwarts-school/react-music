@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from '../index';
-import { renderWithRouter } from '@test-tools/renderWithRouter';
+import Home from '@pages/Home';
+import renderWithRouter from '@test-tools/renderWithRouter';
 
-test('renders text', () => {
+test('renders element', () => {
   const { getByTestId } = renderWithRouter(<Home />);
   const el = getByTestId('homeTitle');
   expect(el).not.toBeNull();

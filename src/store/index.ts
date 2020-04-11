@@ -1,7 +1,4 @@
-import Common from './Common';
-import compose from './compose';
+import User from './User';
 
-// 全局的上下文
-let Provider = compose(Common);
 
-export { Provider, Common };
+export { User };

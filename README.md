@@ -27,12 +27,18 @@ In the project directory, you can run:
 
 状态管理：[unstated-next](https://github.com/jamiebuilds/unstated-next)
 
-css 扩展：[sass](https://www.sass.hk/)、[css module](https://github.com/css-modules/css-modules)、
+不可变数据结构：[immer](https://github.com/immerjs/immer)
+
+基础UI组件库：[antd-mobile](https://github.com/ant-design/ant-design-mobile)
+
+css 预处理：[sass](https://www.sass.hk/)、[css module](https://github.com/css-modules/css-modules)、
 [classnames](https://github.com/JedWatson/classnames)
 
-请求：[swr](https://github.com/zeit/swr)
+字体图标库：[iconfont](https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=1748384)
 
-第三方库：[react-use](https://github.com/streamich/react-use)
+请求：[swr](https://github.com/zeit/swr)、[axios](https://github.com/axios/axios)
+
+第三方库：[react-use](https://github.com/streamich/react-use)、[ramda](https://ramda.cn/)
 
 单元测试
 ：[jest](https://github.com/facebook/jest)、[react-testing-library](https://github.com/testing-library/react-testing-library)

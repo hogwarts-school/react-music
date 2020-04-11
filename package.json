@@ -2,19 +2,26 @@
   "name": "react-music",
   "jest": {
     "moduleNameMapper": {
-      "^@src(.*)$": "<rootDir>/$1",
-      "^@component(.*)$": "<rootDir>/src/component$1",
+      "^@src(.*)$": "<rootDir>/src$1",
+      "^@components(.*)$": "<rootDir>/src/components$1",
       "^@constant(.*)$": "<rootDir>/src/constant$1",
       "^@pages(.*)$": "<rootDir>/src/pages$1",
       "^@sass(.*)$": "<rootDir>/src/sass$1",
       "^@store(.*)$": "<rootDir>/src/store$1",
-      "^@test-tools(.*)$": "<rootDir>/src/test-tools$1"
+      "^@test-tools(.*)$": "<rootDir>/src/test-tools$1",
+      "^@middleware(.*)$": "<rootDir>/src/middleware$1",
+      "^@hooks(.*)$": "<rootDir>/src/hooks$1"
     }
   },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/ramda": "^0.27.3",
+    "antd-mobile": "^2.3.1",
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "immer": "^6.0.3",
+    "ramda": "^0.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
@@ -36,7 +43,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "ci": "npm run lint && npm run test -- --watchAll=false && npm rebuild node-sass && npm run build"
+    "ci": "npm run lint && npm run test -- --watchAll=false && tsc && npm rebuild node-sass && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -74,6 +81,7 @@
     "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
     "node-sass": "^4.13.1",
+    "postcss-pxtorem": "^3.3.1",
     "pre-commit": "^1.2.2",
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1",

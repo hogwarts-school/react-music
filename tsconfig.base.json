@@ -3,12 +3,13 @@
     "paths": {
       "globalType": ["./src/types/global.d.ts"],
       "@src/*": ["./src/*"],
-      "@component/*": ["./src/components/*"],
+      "@components/*": ["./src/components/*"],
       "@constant/*": ["./src/constant/*"],
       "@pages/*": ["./src/pages/*"],
       "@sass/*": ["./src/sass"],
       "@store/*": ["./src/store/*"],
-      "@test-tools/*": ["./src/test-tools/*"]
+      "@test-tools/*": ["./src/test-tools/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   }
 }

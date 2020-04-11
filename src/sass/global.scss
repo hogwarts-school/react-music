@@ -1,17 +1,30 @@
 /* 全局样式 */
 @import './utils.scss';
 
+#root {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: px2rem(16);
+  font-size: px2rem(32);
+  touch-action: manipulation;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.w100percent {
+  width: 100%;
+}
+
+.h100percent {
+  height: 100%;
 }
 
 .df {

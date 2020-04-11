@@ -1,14 +1,24 @@
 {
-  "words": [
-    "antd",
-    "prettierrc",
-    "browserslist",
-    "testid",
-    "eqeqeq",
-    "onupdatefound",
-    "onstatechange",
-    "precached",
-    "commitlint",
-    "esnext"
-  ]
+    "version": "0.1",
+    "language": "en",
+    "words": [
+        "antd",
+        "browserslist",
+        "catlist",
+        "commitlint",
+        "eqeqeq",
+        "esnext",
+        "immer",
+        "onstatechange",
+        "onupdatefound",
+        "precached",
+        "prettierrc",
+        "pxtorem",
+        "qunti",
+        "testid",
+        "webfonts"
+    ],
+    "flagWords": [
+        "hte"
+    ]
 }

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Common } from '@store/index';
+import { User } from '@src/store';
 import { useHistory } from 'react-router-dom';
 
-const User: React.FC<{}> = () => {
-  const { userName } = Common.useContainer();
+const UserPage: React.FC<{}> = () => {
+  const { userInfo: { nickname } } = User.useContainer();
   const history = useHistory();
   return (
     <div>
-      User - {userName}
+      User - {nickname}
       <button onClick={history.goBack}>返回</button>
     </div>
   );
 };
 
-export default User;
+export default UserPage;
