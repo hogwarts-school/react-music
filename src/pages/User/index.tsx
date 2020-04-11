@@ -7,7 +7,7 @@ const UserPage: React.FC<{}> = () => {
   const history = useHistory();
   return (
     <div>
-      User - {nickname}
+      用户页面哦 - {nickname}
       <button onClick={history.goBack}>返回</button>
     </div>
   );

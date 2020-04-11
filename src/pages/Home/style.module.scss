@@ -1,17 +1,11 @@
+@import '~@sass/themeify.scss';
 @import '~@sass/utils.scss';
 
 .homeContainer {
-  color: red;
-  width: px2rem(300);
+  @include themeify {
+    color: themed('text-color-black');
+  }
 }
-.class1 {
-  color: green;
-}
-
-.class2 {
-  color: skyblue;
-}
-
 
 .demoBox {
   width: 3.75rem;

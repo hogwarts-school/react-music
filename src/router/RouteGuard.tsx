@@ -1,7 +1,6 @@
-import React, { useEffect, useCallback } from 'react';
-import { Route, Redirect, useHistory, RouteProps } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { Route, Redirect } from 'react-router-dom';
 import { User } from '@src/store';
-import { PickComponentParam } from 'globalType';
 
 type RouterGuardProps = React.ComponentProps<typeof Route> & {
   redirectPath?: string;
@@ -10,7 +9,6 @@ type RouterGuardProps = React.ComponentProps<typeof Route> & {
 const RouteGuard: React.FC<RouterGuardProps> = ({
   children,
   redirectPath = '/login',
-  component,
   ...otherProps
 }) => {
   const {
@@ -18,7 +16,7 @@ const RouteGuard: React.FC<RouterGuardProps> = ({
   } = User.useContainer();
   const render = useCallback(({ location }) => {
     if (token) {
-      return component;
+      return children;
     }
     return (
       <Redirect
@@ -28,7 +26,7 @@ const RouteGuard: React.FC<RouterGuardProps> = ({
         }}
       />
     );
-  }, []);
+  }, [children, redirectPath, token]);
 
   return <Route {...otherProps} render={render} />;
 };

@@ -1,4 +1,4 @@
 import User from './User';
+import Global from './Global';
 
-
-export { User };
+export { User, Global };

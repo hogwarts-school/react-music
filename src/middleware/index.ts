@@ -1,4 +1,4 @@
-import withFetcher, { WithFetcher } from './withFetcher';
-import withStore, { WithProvider } from './withStore';
+import withFetcher from './withFetcher';
+import withStore from './withStore';
 
 export { withFetcher, withStore };

@@ -1,0 +1,44 @@
+/* 覆盖antd-mobile */
+@import './utils.scss';
+@import './themeify.scss';
+
+#root input::-webkit-input-placeholder {
+  @include themeify {
+    color: themed('text-color-placeholder');
+  }
+}
+
+.am-list-item {
+  @include themeify {
+    background-color: themed('bg-color-white');
+  }
+  transition: none;
+  .am-input-label {
+    @include themeify {
+      color: themed('text-color-black');
+      background-color: themed('bg-color-white');
+    }
+  }
+  .am-input-control input {
+    @include themeify {
+      color: themed('text-color-black');
+    }
+  }
+  .am-list-item .am-input-clear {
+    @include themeify {
+      background-color: themed('bg-color-grey');
+    }
+  }
+}
+
+.am-button {
+  @include themeify {
+    &::before {
+      border-color: themed('border-color-default');
+    }
+    color: themed('text-color-white');
+    background-color: themed('bg-color-primary');
+  }
+
+  
+}

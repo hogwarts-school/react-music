@@ -1,0 +1,24 @@
+@import '~@sass/themeify.scss';
+@import '~@sass/utils.scss';
+
+
+.container {
+  padding: 0 .32rem;
+  @include width-height(100%, 100%);
+  // @include themeify {
+  //   background-color: themed('bg-color-white');
+  // }
+}
+
+.title {
+  margin-top: -2rem;
+  margin-bottom: 1.4rem;
+  font-size: .6rem;
+  @include themeify {
+    color: themed('text-color-primary');
+  }
+}
+
+.login {
+  margin-top: 1.4rem;
+}

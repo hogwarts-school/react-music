@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { createContainer } from 'unstated-next';
 import produce from 'immer';
-import * as R from 'ramda';
+import { useLocalStorage } from 'react-use';
 
 const defaultUserInfo = {
   token: '', // token
@@ -10,17 +10,17 @@ const defaultUserInfo = {
   signature: '', // 个性签名
   avatarUrl: '', // 头像
   followers: 0, // 粉丝
-  following: 0 // 关注的人
+  following: 0, // 关注的人
+  phone: '',
+  password: '',
 };
 
 type UserInfo = typeof defaultUserInfo;
 type PartUserInfo = Partial<UserInfo>;
 
 const User = () => {
-  const defaultUserName = '陌生人';
-  const [userInfo, setUserInfo] = useState<UserInfo>(defaultUserInfo);
-  const [userName, setUserName] = useState(defaultUserName);
-
+  const [initUserInfo, saveUserInfo] = useLocalStorage<UserInfo>('userInfo', defaultUserInfo);
+  const [userInfo, setUserInfo] = useState<UserInfo>(initUserInfo);
   const logout = useCallback(() => {
     setUserInfo(defaultUserInfo);
   }, [setUserInfo]);
@@ -29,17 +29,18 @@ const User = () => {
     (partUserInfo: PartUserInfo) => {
       setUserInfo(
         produce(userInfo, (draftState) => {
-          console.log(partUserInfo, 'partUserInfo');
           Object.entries(partUserInfo).forEach(([key, value]) => {
-            // draftState[key] = value;
             Object.assign(draftState, partUserInfo);
-            // draftState.nickname = value
           });
         })
       );
     },
     [userInfo, setUserInfo]
   );
+
+  useEffect(() => {
+    saveUserInfo(userInfo);
+  }, [userInfo, saveUserInfo]);
 
   return { logout, userInfo, setUserInfo: onUpdUserInfo };
 };

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container } from 'unstated-next';
 
-const withProvider = (Container: Container<any, any>, initialState?: any) => (
+type TContainer<V, S> = Container<V, S>;
+
+const withProvider = <V, S>(Container: TContainer<V, S>, initialState?: any) => (
   instance: React.ReactElement
 ) => {
   return <Container.Provider initialState={initialState}>{instance}</Container.Provider>;

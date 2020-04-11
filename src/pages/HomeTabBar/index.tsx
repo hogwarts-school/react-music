@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
-import { TabBar, Icon } from 'antd-mobile';
+import { TabBar } from 'antd-mobile';
 import Home from '@pages/Home';
 import User from '@pages/User';
 export enum HomeTabBarType {
@@ -8,7 +8,7 @@ export enum HomeTabBarType {
 }
 
 const HomeTabBar: React.FC<{}> = () => {
-  const [activeItem, setActiveItem] = useState(HomeTabBarType.Home);
+  const [activeItem] = useState(HomeTabBarType.Home);
 
   const tabBarList = useMemo(() => {
     return [
@@ -45,7 +45,7 @@ const HomeTabBar: React.FC<{}> = () => {
     <TabBar>
       {tabBarList.map((item) => {
         const { render, ...otherInfo } = item;
-        const { key, title, badge, dot, icon, selectedIcon } = otherInfo;
+        const { key, title, dot } = otherInfo;
         const isSelected = activeItem === key;
         return (
           <TabBar.Item

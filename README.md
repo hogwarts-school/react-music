@@ -31,7 +31,7 @@ In the project directory, you can run:
 
 基础UI组件库：[antd-mobile](https://github.com/ant-design/ant-design-mobile)
 
-css 预处理：[sass](https://www.sass.hk/)、[css module](https://github.com/css-modules/css-modules)、
+css：[sass](https://www.sass.hk/)、[css module](https://github.com/css-modules/css-modules)、
 [classnames](https://github.com/JedWatson/classnames)
 
 字体图标库：[iconfont](https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=1748384)
