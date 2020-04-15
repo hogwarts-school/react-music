@@ -36,7 +36,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "homepage": "https://croatiaparanoia.github.io/react-music",
+  "homepage": "https://hogwarts-school.github.io/react-music",
   "scripts": {
     "lint": "eslint src/ --ext .ts,.tsx",
     "start": "react-app-rewired start",
