@@ -46,7 +46,7 @@ css：[sass](https://www.sass.hk/)、[css module](https://github.com/css-modules
 代码风格
 ：[eslint](https://github.com/eslint/eslint)、[prettier](https://github.com/prettier/prettier)
 
-vs code插件：[eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+vs code插件：[eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)、 [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)、 [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 工程化：[husky](https://github.com/typicode/husky)、
 [pre-commit](https://github.com/pre-commit/pre-commit)、
