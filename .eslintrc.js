@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['alloy', 'alloy/react', 'alloy/typescript'],
-  plugins: ['react-hooks'],
+  extends: ['alloy', 'alloy/react'],
+  plugins: [],
   env: {
     // Your environments (which contains several predefined global variables)
     //
@@ -17,8 +17,6 @@ module.exports = {
   },
   rules: {
     // Customize your rules
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn' // <--- THIS IS THE NEW RULE
   },
   settings: {
     react: {

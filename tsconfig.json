@@ -22,7 +22,7 @@
     "baseUrl": "."
   },
   "include": [
-    "src",
+    "src/**/.{ts,tsx}",
     "commitlint.config.js"
   ]
 }

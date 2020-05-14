@@ -38,7 +38,7 @@
   },
   "homepage": "https://hogwarts-school.github.io/react-music",
   "scripts": {
-    "lint": "eslint src/ --ext .ts,.tsx",
+    "lint": "eslint src/ --ext .js,.jsx",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
