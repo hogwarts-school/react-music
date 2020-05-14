@@ -1,15 +1,7 @@
 /* 全局样式 */
 @import './utils.scss';
-@import './themeify.scss';
-@import './antd-mobile.scss';
 #root {
   height: 100vh;
-  @include themeify {
-    background-color: themed('bg-color-white');
-  }
-  * {
-    box-sizing: border-box;
-  }
 }
 
 body {

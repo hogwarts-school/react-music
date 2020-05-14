@@ -2,11 +2,11 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
-import { User } from '@src/store';
+import Global from '@store/Global';
 import { withStore } from '@src/middleware';
 import * as R from 'ramda';
 
-const wrapper = R.pipe(withStore(User));
+const wrapper = R.pipe(withStore(Global));
 
 export default function renderWithRouter(
   ui: React.ReactElement,

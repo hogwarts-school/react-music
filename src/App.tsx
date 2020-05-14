@@ -1,12 +1,13 @@
 import React from 'react';
 import * as R from 'ramda';
 import Router from './router';
-import { User, Global } from './store';
+import Global from './store/Global';
+
 import { withFetcher, withStore } from './middleware';
 
 import './sass/global.scss';
 
-const wrapper = R.pipe(withStore(User), withStore(Global), withFetcher());
+const wrapper = R.pipe(withStore(Global), withFetcher());
 
 const App = () => {
   return wrapper(<Router />);

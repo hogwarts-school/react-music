@@ -17,7 +17,7 @@
   "private": true,
   "dependencies": {
     "@types/ramda": "^0.27.3",
-    "antd-mobile": "^2.3.1",
+    "antd": "^4.2.2",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "immer": "^6.0.3",
