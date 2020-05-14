@@ -14,7 +14,7 @@
     }
   },
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@types/ramda": "^0.27.3",
     "antd": "^4.2.2",
@@ -35,12 +35,13 @@
     "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "ci": "npm run lint && npm run test -- --watchAll=false && tsc && npm rebuild node-sass && npm run build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "",
+      "pre-commit": "pretty-quick --pattern='src/*' --staged && npm run ci",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -78,7 +79,7 @@
     "eslint": "^6.8.0",
     "eslint-config-alloy": "^3.6.0",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^0.0.0-d7382b6c4",
+    "eslint-plugin-react-hooks": "^4.0.2",
     "husky": "^4.2.3",
     "node-sass": "^4.13.1",
     "postcss-pxtorem": "^3.3.1",
