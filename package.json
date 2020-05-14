@@ -30,12 +30,6 @@
     "swr": "^0.2.0",
     "unstated-next": "^1.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --pattern='src/*' --staged && npm run lint && npm run test -- --watchAll=false && npm run build",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "homepage": "https://hogwarts-school.github.io/react-music",
   "scripts": {
     "lint": "eslint src/ --ext .ts,.tsx",
@@ -44,6 +38,12 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "ci": "npm run lint && npm run test -- --watchAll=false && tsc && npm rebuild node-sass && npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --pattern='src/*' --staged && npm run ci",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
