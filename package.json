@@ -37,11 +37,11 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "ci": "npm run lint && npm run test -- --watchAll=false && tsc && npm rebuild node-sass && npm run build"
+    "ci": "npm run lint && tsc && npm rebuild node-sass && npm run build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --pattern='src/*' --staged && npm run ci",
+      "pre-commit": "pretty-quick --pattern='src/*' && npm run ci",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -80,7 +80,7 @@
     "eslint-config-alloy": "^3.6.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.2",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "node-sass": "^4.13.1",
     "postcss-pxtorem": "^3.3.1",
     "pre-commit": "^1.2.2",
